@@ -1,4 +1,4 @@
-# Lista de tarefas com consumo de API
+# Pokédex com consumo de API
 
 ![Pokédex](./screenshot.png)
 
