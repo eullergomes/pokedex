@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Lista de tarefas com consumo de API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Pokédex](./screenshot.png)
 
-## Available Scripts
+Este repositório contém uma aplicação de uma Pokédex feita em ReactJS e [Material UI](https://mui.com/material-ui/) para a criação de componentes prontos, rápidos e responsivos.
 
-In the project directory, you can run:
+## Deploy da aplicação
+...
 
-### `npm start`
+## Tecnologias utilizadas
+- HTML
+- CSS
+- JavaScript
+- ReactJS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📖 Funcionamento
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- O app coleta os dados da API [PokéAPI](https://pokeapi.co/)
+e renderiza os pokémons em cards com imagem, nome e tipo do pokémon
+- Filtragem de pokémons rápida e otimizada no campo de pesquisa com **useMemo()**
+- Na próxima etapa será adicionado Rotas, assim ao clicar em algum card o site redimencionará o usuário para uma página com mais informações do pokémon clicado. 
 
-### `npm test`
+## ⚙️ Como executar localmente
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para executar a aplicação localmente, siga os passos abaixo:
 
-### `npm run build`
+### 1. Clone este repositório:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  git clone https://github.com/eullergomes/pokedex.git
+  cd pokedex
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Instale as dependências
 
-### `npm run eject`
+ Instalar todas as dependências listadas no arquivo package.json
+```bash
+  npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Inicie a aplicação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h2 id="license">📃 License</h2>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está sob licensa do [MIT](LICENSE)

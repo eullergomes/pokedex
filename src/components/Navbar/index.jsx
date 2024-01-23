@@ -7,6 +7,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Search = styled('div')(({ theme }) => ({
+  display: 'flex',
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -48,7 +49,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Navbar({ pokemonFilter }) {
+export default function Navbar({ setBusca }) {
   return (
     <Box sx={{ flexGrow: 1, marginBottom:"2em" }}>
       <AppBar position="static" sx={{backgroundColor:"black"}}>
@@ -56,11 +57,11 @@ export default function Navbar({ pokemonFilter }) {
           <Box display="flex" justifyContent="space-between" width="100%">
             <Box component="img" src="./assets/pokemon-logo.png" height="3em"></Box>
           
-            <Search onChange={(e)=> pokemonFilter(e.target.value)}>
-              <SearchIconWrapper>
+            <Search onChange={(e)=> setBusca(e.target.value)}>
+              <SearchIconWrapper >
                 <SearchIcon />
               </SearchIconWrapper>
-            <StyledInputBase placeholder="Pesquisar" inputProps={{ 'aria-label': 'search' }}/>
+              <StyledInputBase placeholder="Pesquisar" inputProps={{ 'aria-label': 'search' }}/>
             </Search>
           </Box>
           
