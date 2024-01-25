@@ -1,12 +1,18 @@
-import * as React from 'react';
-import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
+import { Skeleton } from "@mui/material";
+import { Container } from "@mui/system";
+import React from "react";
 
-export default function Variants() {
+const SkeletonHome = () => {
   return (
-    <Stack>
-      <Skeleton variant="rounded" width={'100%'} height={150} />
+    <Container>
+      <Skeleton variant="rounded" width="100%" height={150} sx={{ marginBottom: "1em" }} />
+      <Skeleton variant="rounded" width="100%" height={150} sx={{ marginBottom: "1em" }} />
+      <Skeleton variant="rounded" width="100%" height={150} sx={{ marginBottom: "1em" }} />
+      <Skeleton variant="rounded" width="100%" height={150} sx={{ marginBottom: "1em" }} />
+      <Skeleton variant="rounded" width="100%" height={150} sx={{ marginBottom: "1em" }} />
+      <Skeleton variant="rounded" width="100%" height={150} sx={{ marginBottom: "1em" }} />
+    </Container>
+  )
+};
 
-    </Stack>
-  );
-}
+export default SkeletonHome;

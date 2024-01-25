@@ -6,6 +6,8 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 
+// import { useNavigate } from 'react-router-dom';
+
 const Search = styled('div')(({ theme }) => ({
   display: 'flex',
   position: 'relative',
@@ -49,20 +51,24 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Navbar({ setBusca }) {
+export default function Navbar({ setBusca, hideSearch, handleBackButtonClick }) {
+  
+  // const navigate = useNavigate()
   return (
     <Box sx={{ flexGrow: 1, marginBottom:"2em" }}>
       <AppBar position="static" sx={{backgroundColor:"black"}}>
         <Toolbar>
           <Box display="flex" justifyContent="space-between" width="100%">
-            <Box component="img" src="./assets/pokemon-logo.png" height="3em"></Box>
-          
-            <Search onChange={(e)=> setBusca(e.target.value)}>
-              <SearchIconWrapper >
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase placeholder="Pesquisar" inputProps={{ 'aria-label': 'search' }}/>
-            </Search>
+            <Box onClick={() => handleBackButtonClick()} component="img" src="./assets/pokemon-logo.png" height="3em" sx={{cursor: 'pointer'}}></Box>
+            {hideSearch ? null : (
+              <Search onChange={(e)=> setBusca(e.target.value)}>
+                <SearchIconWrapper >
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase placeholder="Pesquisar" inputProps={{ 'aria-label': 'search' }}/>
+              </Search>
+            )}
+            
           </Box>
           
         </Toolbar>
